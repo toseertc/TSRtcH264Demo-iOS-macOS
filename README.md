@@ -1,8 +1,8 @@
-# rzpaas_sdk_demo_264_apple
+# rtc_demo_264_apple
 
-展示RZPaasSDK如何使用外部H264的自定义数据源
+展示Rtc iOS/macOS SDK如何使用外部H264的自定义数据源
 
-# sdk [下载地址](https://docs.rzrtc.com/docs/paas/download/)
+# sdk [下载地址](https://rtc-docs.tosee.cn/docs/paas/download)
 
 ## 运行demo
 
@@ -16,5 +16,5 @@
 
 2. 执行`pod install`
 3. 运行demo, ios/mac
-    - `rzpaas_sdk_demo_264_ios`
-    - `rzpaas_sdk_demo_264_macos`
+    - `rtc_demo_264_ios`
+    - `rtc_demo_264_macos`
