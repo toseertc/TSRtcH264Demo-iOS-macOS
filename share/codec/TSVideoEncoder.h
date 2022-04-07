@@ -32,7 +32,8 @@ NS_ASSUME_NONNULL_BEGIN
        didEncodeH264:(void *)h264Data
           dataLength:(int)length
           isKeyFrame:(BOOL)isKeyFrame
-           timestamp:(NSTimeInterval)timestamp;
+           timestamp:(NSTimeInterval)timestamp
+             bitrate:(int)bitrate;
 
 @end
 
@@ -43,6 +44,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 @property (strong ,nonatomic, readonly) TSVideoEncodeConfig *encodeConfig;
+
+@property (nonatomic, assign) int bitrate;
 
 - (instancetype)initWithDelegate:(id<TSVideoEncoderDelegate>)delegate;
 - (void)encodeNv12PixelBuffer:(CVPixelBufferRef)pixelBuffer timestamp:(NSTimeInterval)timestamp;

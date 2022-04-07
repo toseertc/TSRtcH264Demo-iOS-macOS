@@ -74,6 +74,12 @@ static uint64_t rz_milliseconds(void)
     [_videoCapturer stop];
 }
 
+- (void)onPredictedBitrate:(int)bitrate isLow:(BOOL)isLow {
+    if (isLow) {
+        return;
+    }
+    [self.videoEncoder setBitrate:bitrate];
+}
 
 - (void)displayPixelBuffer:(CVPixelBufferRef)pixelBuffer timestamp:(NSTimeInterval)timestamp {
     if (!pixelBuffer) {
@@ -128,14 +134,17 @@ static uint64_t rz_milliseconds(void)
     });
 }
 
-- (void)videoEncoder:(nonnull TSVideoEncoder *)videoEncoder didEncodeH264:(nonnull void *)h264Data dataLength:(int)length isKeyFrame:(BOOL)isKeyFrame timestamp:(NSTimeInterval)timestamp
+- (void)videoEncoder:(nonnull TSVideoEncoder *)videoEncoder didEncodeH264:(nonnull void *)h264Data dataLength:(int)length isKeyFrame:(BOOL)isKeyFrame timestamp:(NSTimeInterval)timestamp bitrate:(int)bitrate
 {
     //发送
     if (self.masterVideoSource.consumer) {
-        [self.masterVideoSource.consumer consumePacket:h264Data length:length bufferType:TSVideoBufferTypeH264 isKeyframe:isKeyFrame timestamp:timestamp];
+        [self.masterVideoSource.consumer consumePacket:h264Data length:length bufferType:TSVideoBufferTypeH264 isKeyframe:isKeyFrame bitrate:bitrate  timestamp:timestamp];
     }
-    
 }
 
+
+- (void)videoDecoder:(nonnull TSVideoDecoder *)videoDecoder receiveDecodedData:(uint8_t * _Nonnull * _Nonnull)data yuvStride:(nonnull int *)yuvStride width:(int)width height:(int)height pix_format:(TSYUVType)pix_format {
+    
+}
 
 @end

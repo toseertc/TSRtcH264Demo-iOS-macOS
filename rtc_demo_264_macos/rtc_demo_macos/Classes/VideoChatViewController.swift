@@ -32,6 +32,11 @@ class VideoChatViewController: NSViewController {
     
     @IBOutlet weak var channelIdLabel: NSTextField!
     
+    @IBOutlet weak var predictedBitrateLabel: NSTextField!
+    
+    @IBOutlet weak var uplinkBandwidthLabel: NSTextField!
+    
+    @IBOutlet weak var downlinkBandwidthLabel: NSTextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -172,6 +177,21 @@ extension VideoChatViewController: EngineManagerDelegate {
             self.leaveChannle()
         }
     }
+    
+    func onPredictedBitrate(bitrate: Int, isLow: Bool) {
+        
+        runOnMainThread {
+            self.predictedBitrateLabel.stringValue = "预测:\(bitrate/1024/8)KB"
+        }
+    }
+    
+    internal func onBandwidthUpdate(uplink: Float, downlink: Float) {
+        runOnMainThread {
+            self.uplinkBandwidthLabel.stringValue = "↑ \(uplink)KB"
+            self.downlinkBandwidthLabel.stringValue = "↓ \(downlink)KB"
+        }
+    }
+    
 }
 
 

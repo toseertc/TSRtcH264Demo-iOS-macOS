@@ -44,15 +44,91 @@
 		A5F26DB625B7D6DD001E965A /* TSVideoPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F26DAB25B7D6DD001E965A /* TSVideoPlayView.m */; };
 		A5F26DB725B7D6DD001E965A /* TSVideoCapturer.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F26DAC25B7D6DD001E965A /* TSVideoCapturer.m */; };
 		A5F26DB825B7D6DD001E965A /* TSVideoCapturerUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F26DAD25B7D6DD001E965A /* TSVideoCapturerUtil.m */; };
-		A5F26DB925B7D6DD001E965A /* TSVideoEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F26DB325B7D6DD001E965A /* TSVideoEncoder.m */; };
+		A5F26DB925B7D6DD001E965A /* TSVideoEncoder.mm in Sources */ = {isa = PBXBuildFile; fileRef = A5F26DB325B7D6DD001E965A /* TSVideoEncoder.mm */; };
 		A5F26DBA25B7D6DD001E965A /* TSVideoDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F26DB425B7D6DD001E965A /* TSVideoDecoder.m */; };
 		A5F26DBD25B7D72B001E965A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F26DBC25B7D72B001E965A /* libz.tbd */; };
 		A5F26DC025B7D733001E965A /* libbz2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F26DBF25B7D733001E965A /* libbz2.tbd */; };
 		A5F26DC325B7D739001E965A /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F26DC225B7D739001E965A /* libiconv.tbd */; };
 		A5F26DEE25B82AD1001E965A /* TSMVideoSourceImp.m in Sources */ = {isa = PBXBuildFile; fileRef = A5F26DED25B82AD1001E965A /* TSMVideoSourceImp.m */; };
 		E959B626A62F0F360FB1F324 /* Pods_rtc_demo_264_macos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23ACA5F24D0A033CB2602BA2 /* Pods_rtc_demo_264_macos.framework */; };
+		FE4E0D9727F6912600821F73 /* TSRtc_macOS.framework/TSRtc_macOS in Frameworks */ = {isa = PBXBuildFile; fileRef = FE4E0D6A27F690F000821F73 /* TSRtc_macOS.framework/TSRtc_macOS */; };
+		FE4E0D9827F6912600821F73 /* TSRtc_macOS.framework/TSRtc_macOS in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE4E0D6A27F690F000821F73 /* TSRtc_macOS.framework/TSRtc_macOS */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FE9FDE0B27ED5FAB007DEBBE /* TSSourceManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE9FDE0927ED5FAB007DEBBE /* TSSourceManager.m */; };
+		FEF281E327F550A60011926D /* TSBitrateHelper.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FEF281E127F550A60011926D /* TSBitrateHelper.cpp */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE4E0D6327F690F000821F73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE4E0D5527F690F000821F73 /* RtcSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 34ADBE693A834C18A2B0D443;
+			remoteInfo = RtcBitrateAdjustor;
+		};
+		FE4E0D6527F690F000821F73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE4E0D5527F690F000821F73 /* RtcSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A35DEADFE72949CF80B27126;
+			remoteInfo = Sol2Common;
+		};
+		FE4E0D6727F690F000821F73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE4E0D5527F690F000821F73 /* RtcSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5C34E3BEEC16405AB41AAC1C;
+			remoteInfo = Sol2Socket;
+		};
+		FE4E0D6927F690F000821F73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE4E0D5527F690F000821F73 /* RtcSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6B89FF463E134ECB9E858258;
+			remoteInfo = TSRtc_macOS;
+		};
+		FE4E0D6B27F690F000821F73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE4E0D5527F690F000821F73 /* RtcSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8942769AA5F54A62B23CD5F8;
+			remoteInfo = "mn-library";
+		};
+		FE4E0D6D27F690F000821F73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE4E0D5527F690F000821F73 /* RtcSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4E8BB2A4CA984C2598CF3A38;
+			remoteInfo = razor;
+		};
+		FE4E0D6F27F690F000821F73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE4E0D5527F690F000821F73 /* RtcSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 99CA07FD63604F55B912AACE;
+			remoteInfo = sol;
+		};
+		FE4E0D7127F690F000821F73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE4E0D5527F690F000821F73 /* RtcSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = C733B9F5B26843F5B284F3A8;
+			remoteInfo = sol2;
+		};
+		FE4E0D7327F690F000821F73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE4E0D5527F690F000821F73 /* RtcSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 035B9EAF53D74EF8BD2E9F4B;
+			remoteInfo = sol2_proto_files;
+		};
+		FE4E0D9527F6911600821F73 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE4E0D5527F690F000821F73 /* RtcSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 1DA8306CBEA34ACFAECA4439;
+			remoteInfo = TSRtc_macOS;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		A540599025BA678D0089DA8F /* Embed Frameworks */ = {
@@ -61,6 +137,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				FE4E0D9827F6912600821F73 /* TSRtc_macOS.framework/TSRtc_macOS in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,7 +339,7 @@
 		A5F26DAF25B7D6DD001E965A /* TSVideoPlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSVideoPlayView.h; sourceTree = "<group>"; };
 		A5F26DB025B7D6DD001E965A /* TSVideoCapturerUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSVideoCapturerUtil.h; sourceTree = "<group>"; };
 		A5F26DB225B7D6DD001E965A /* TSVideoDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSVideoDecoder.h; sourceTree = "<group>"; };
-		A5F26DB325B7D6DD001E965A /* TSVideoEncoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSVideoEncoder.m; sourceTree = "<group>"; };
+		A5F26DB325B7D6DD001E965A /* TSVideoEncoder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = TSVideoEncoder.mm; sourceTree = "<group>"; };
 		A5F26DB425B7D6DD001E965A /* TSVideoDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSVideoDecoder.m; sourceTree = "<group>"; };
 		A5F26DB525B7D6DD001E965A /* TSVideoEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSVideoEncoder.h; sourceTree = "<group>"; };
 		A5F26DBC25B7D72B001E965A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -271,8 +348,11 @@
 		A5F26DEC25B82AD1001E965A /* TSMVideoSourceImp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSMVideoSourceImp.h; sourceTree = "<group>"; };
 		A5F26DED25B82AD1001E965A /* TSMVideoSourceImp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSMVideoSourceImp.m; sourceTree = "<group>"; };
 		FDC672C0F41EC144222E4DED /* Pods-rtc_demo_264_macos.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rtc_demo_264_macos.release.xcconfig"; path = "Target Support Files/Pods-rtc_demo_264_macos/Pods-rtc_demo_264_macos.release.xcconfig"; sourceTree = "<group>"; };
+		FE4E0D5527F690F000821F73 /* RtcSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RtcSDK.xcodeproj; path = "../../../../Projects/rtc-test-apple/rtc-sdk-apple/TSRtc/Classes/rtc-sdk-cpp/build/RtcSDK.xcodeproj"; sourceTree = "<group>"; };
 		FE9FDE0927ED5FAB007DEBBE /* TSSourceManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TSSourceManager.m; sourceTree = "<group>"; };
 		FE9FDE0A27ED5FAB007DEBBE /* TSSourceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSourceManager.h; sourceTree = "<group>"; };
+		FEF281E127F550A60011926D /* TSBitrateHelper.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TSBitrateHelper.cpp; sourceTree = "<group>"; };
+		FEF281E227F550A60011926D /* TSBitrateHelper.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TSBitrateHelper.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +370,7 @@
 				A5F26DA325B7D6CC001E965A /* libavformat.a in Frameworks */,
 				A5F26DA525B7D6CC001E965A /* libswscale.a in Frameworks */,
 				A5F26DA825B7D6CC001E965A /* libx264.a in Frameworks */,
+				FE4E0D9727F6912600821F73 /* TSRtc_macOS.framework/TSRtc_macOS in Frameworks */,
 				A5F26DA425B7D6CC001E965A /* libswresample.a in Frameworks */,
 				A5F26DA125B7D6CC001E965A /* libavcodec.a in Frameworks */,
 				E959B626A62F0F360FB1F324 /* Pods_rtc_demo_264_macos.framework in Frameworks */,
@@ -348,6 +429,7 @@
 		A54D3E0525A47213000B23D4 = {
 			isa = PBXGroup;
 			children = (
+				FE4E0D5527F690F000821F73 /* RtcSDK.xcodeproj */,
 				A5588A5025A7127B0046EE2C /* share */,
 				A54D3E1025A47213000B23D4 /* rtc_demo_macos */,
 				A54D3E0F25A47213000B23D4 /* Products */,
@@ -721,11 +803,29 @@
 			isa = PBXGroup;
 			children = (
 				A5F26DB225B7D6DD001E965A /* TSVideoDecoder.h */,
-				A5F26DB325B7D6DD001E965A /* TSVideoEncoder.m */,
+				A5F26DB325B7D6DD001E965A /* TSVideoEncoder.mm */,
 				A5F26DB425B7D6DD001E965A /* TSVideoDecoder.m */,
 				A5F26DB525B7D6DD001E965A /* TSVideoEncoder.h */,
+				FEF281E127F550A60011926D /* TSBitrateHelper.cpp */,
+				FEF281E227F550A60011926D /* TSBitrateHelper.hpp */,
 			);
 			path = codec;
+			sourceTree = "<group>";
+		};
+		FE4E0D5627F690F000821F73 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FE4E0D6427F690F000821F73 /* libRtcBitrateAdjustor.a */,
+				FE4E0D6627F690F000821F73 /* libSol2Common.a */,
+				FE4E0D6827F690F000821F73 /* libSol2Socket.a */,
+				FE4E0D6A27F690F000821F73 /* TSRtc_macOS.framework/TSRtc_macOS */,
+				FE4E0D6C27F690F000821F73 /* libmn-library.a */,
+				FE4E0D6E27F690F000821F73 /* librazor.a */,
+				FE4E0D7027F690F000821F73 /* libsol.a */,
+				FE4E0D7227F690F000821F73 /* libsol2.a */,
+				FE4E0D7427F690F000821F73 /* libsol2_proto_files.a */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -745,6 +845,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FE4E0D9627F6911600821F73 /* PBXTargetDependency */,
 			);
 			name = rtc_demo_264_macos;
 			productName = rzpaas_sdk_demo_macos;
@@ -777,12 +878,85 @@
 			mainGroup = A54D3E0525A47213000B23D4;
 			productRefGroup = A54D3E0F25A47213000B23D4 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = FE4E0D5627F690F000821F73 /* Products */;
+					ProjectRef = FE4E0D5527F690F000821F73 /* RtcSDK.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				A54D3E0D25A47213000B23D4 /* rtc_demo_264_macos */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		FE4E0D6427F690F000821F73 /* libRtcBitrateAdjustor.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libRtcBitrateAdjustor.a;
+			remoteRef = FE4E0D6327F690F000821F73 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FE4E0D6627F690F000821F73 /* libSol2Common.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSol2Common.a;
+			remoteRef = FE4E0D6527F690F000821F73 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FE4E0D6827F690F000821F73 /* libSol2Socket.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSol2Socket.a;
+			remoteRef = FE4E0D6727F690F000821F73 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FE4E0D6A27F690F000821F73 /* TSRtc_macOS.framework/TSRtc_macOS */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			name = TSRtc_macOS.framework/TSRtc_macOS;
+			path = TSRtc_macOS.framework;
+			remoteRef = FE4E0D6927F690F000821F73 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FE4E0D6C27F690F000821F73 /* libmn-library.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = "libmn-library.a";
+			remoteRef = FE4E0D6B27F690F000821F73 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FE4E0D6E27F690F000821F73 /* librazor.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = librazor.a;
+			remoteRef = FE4E0D6D27F690F000821F73 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FE4E0D7027F690F000821F73 /* libsol.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libsol.a;
+			remoteRef = FE4E0D6F27F690F000821F73 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FE4E0D7227F690F000821F73 /* libsol2.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libsol2.a;
+			remoteRef = FE4E0D7127F690F000821F73 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FE4E0D7427F690F000821F73 /* libsol2_proto_files.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libsol2_proto_files.a;
+			remoteRef = FE4E0D7327F690F000821F73 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A54D3E0C25A47213000B23D4 /* Resources */ = {
@@ -856,6 +1030,7 @@
 			files = (
 				A5356E1925A84CD900CB1527 /* TSAlertHelper.swift in Sources */,
 				86B6CA3625A5642B00EC3CDF /* VideoChatViewController.swift in Sources */,
+				FEF281E327F550A60011926D /* TSBitrateHelper.cpp in Sources */,
 				86B6CA2A25A55B6E00EC3CDF /* TSMView.m in Sources */,
 				A5588A5525A7127B0046EE2C /* VideoChatManager.swift in Sources */,
 				A5F26DEE25B82AD1001E965A /* TSMVideoSourceImp.m in Sources */,
@@ -872,11 +1047,19 @@
 				86B6CA2325A54EBB00EC3CDF /* NSColor+Extention.swift in Sources */,
 				A5588A5725A7127B0046EE2C /* EngineManager.swift in Sources */,
 				A5F26DB825B7D6DD001E965A /* TSVideoCapturerUtil.m in Sources */,
-				A5F26DB925B7D6DD001E965A /* TSVideoEncoder.m in Sources */,
+				A5F26DB925B7D6DD001E965A /* TSVideoEncoder.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE4E0D9627F6911600821F73 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TSRtc_macOS;
+			targetProxy = FE4E0D9527F6911600821F73 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A54D3E1725A47216000B23D4 /* Main.storyboard */ = {
@@ -1020,7 +1203,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = C6T93NC4DJ;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit-macOS/SnapKit.framework/Headers\"",
@@ -1061,7 +1247,10 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = C6T93NC4DJ;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_CONFIGURATION_BUILD_DIR}/SnapKit-macOS/SnapKit.framework/Headers\"",

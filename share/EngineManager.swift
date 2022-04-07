@@ -36,6 +36,9 @@ func runOnMainThread(_ work: @escaping ()->()) {
     @objc optional func shouldHandleOnLeaveChannleSuccess()
     @objc optional func shouldHandleSwitchDualStreamFailed(code: Int, message: String?)
     @objc optional func shouldHandleDeviceNoPermission()
+    @objc optional func onPredictedBitrate(bitrate: Int, isLow: Bool)
+    //单位KB/s
+    @objc optional func onBandwidthUpdate(uplink: Float, downlink: Float)
 }
 
 class EngineManager: NSObject {
@@ -67,12 +70,12 @@ class EngineManager: NSObject {
         encodeConfig.frameRate = TSVideoFrameRate.fps15.rawValue
         encodeConfig.orientationMode = .fixedLandscape
         encodeConfig.mirrorMode = .auto
+
         
         self.encodeConfig = encodeConfig
-        
+        rtcEngine.enableBitratePrediction(true, enableAutoAdjust: false)
         rtcEngine.setVideoEncoderConfiguration(encodeConfig)
         rtcEngine.setLocalRenderMode(.fit, mirrorMode: .auto)
-        
         rtcEngine.enableDualStreamMode(true)
     }
     
@@ -425,6 +428,12 @@ extension EngineManager: TSRtcChannelDelegate {
         }
     }
         
+    func rtcChannel(_ rtcChannel: TSRtcChannel, reportRtcStats stats: TSChannelStats) {
+        
+        self.delegate?.onBandwidthUpdate?(uplink: Float(stats.txKBitrate)/8.0, downlink: Float(stats.rxKBitrate)/8.0)
+        
+    }
+    
 }
 
 
@@ -444,6 +453,14 @@ extension EngineManager : TSRtcVideoStreamDelegate {
     
     func videoStream(_ videoStream: TSRtcVideoStream, onVideoSizeChanged size: CGSize) {
         
+    }
+    
+    
+    func videoStream(_ videoStream: TSRtcVideoStream, onPredictedBitrateChanged newBitrate: Int32, isLowVideo: Bool) {
+        
+        print("\(#function), bitrate = \(newBitrate)")
+        self.sourceManager.onPredictedBitrate(newBitrate, isLow: isLowVideo)
+        self.delegate?.onPredictedBitrate?(bitrate: Int(newBitrate), isLow: isLowVideo)
     }
     
 }

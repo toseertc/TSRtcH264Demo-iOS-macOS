@@ -32,9 +32,11 @@ class ChannelViewController: UIViewController{
     @IBOutlet weak var localIdLabel: UILabel!
     @IBOutlet weak var remoteIdLabel: UILabel!
     
+    @IBOutlet weak var predictedLabel: UILabel!
+    @IBOutlet weak var uplinkLabel: UILabel!
+    @IBOutlet weak var downlinkLabel: UILabel!
     
     @IBOutlet weak var channelIdLabel: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -197,6 +199,21 @@ extension ChannelViewController:EngineManagerDelegate {
             self.leaveChannle()
         }
     }
+    
+    func onBandwidthUpdate(uplink: Float, downlink: Float) {
+        runOnMainThread {
+            self.uplinkLabel.text = "↑ \(uplink)KB"
+            self.downlinkLabel.text = "↓ \(downlink)KB"
+        }
+    }
+    
+    func onPredictedBitrate(bitrate: Int, isLow: Bool) {
+        runOnMainThread {
+            self.predictedLabel.text = "预测：\(bitrate/1024/8)KB"
+        }
+    }
+    
+    
 }
 
 extension ChannelViewController: VideoChatManagerDelegate {

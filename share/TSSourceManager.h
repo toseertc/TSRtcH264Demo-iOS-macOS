@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 //自定义推流 master 本地预览
 @property (nonatomic, strong) id<TSVideoSinkProtocol> masterVideoSink;
 
+//预测码率，需要更新码率
+- (void)onPredictedBitrate:(int)bitrate isLow:(BOOL)isLow;
 
 - (void)start;
 
