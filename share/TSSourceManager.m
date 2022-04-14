@@ -78,6 +78,15 @@ static uint64_t rz_milliseconds(void)
     if (isLow) {
         return;
     }
+    
+    if (bitrate >= 1105920 * 2) {
+        bitrate = 1105920 * 2;
+    }
+    
+    if (bitrate <= 1105920 / 2) {
+        bitrate = 1105920 / 2;
+    }
+    
     [self.videoEncoder setBitrate:bitrate];
 }
 
