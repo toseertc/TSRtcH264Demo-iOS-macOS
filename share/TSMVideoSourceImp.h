@@ -21,6 +21,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TSMVideoSourceImp : NSObject <TSVideoSourceProtocol>
+@property (nonatomic, copy) BOOL(^requestKeyFrameBlock)(void);
 @property (strong) id<TSVideoFrameConsumer> _Nullable consumer;
 @end
 

@@ -73,7 +73,7 @@ class EngineManager: NSObject {
 
         
         self.encodeConfig = encodeConfig
-        rtcEngine.enableBitratePrediction(true, enableAutoAdjust: false)
+//        rtcEngine.enableBitratePrediction(true, enableAutoAdjust: false)
         rtcEngine.setVideoEncoderConfiguration(encodeConfig)
         rtcEngine.setLocalRenderMode(.fit, mirrorMode: .auto)
         rtcEngine.enableDualStreamMode(true)

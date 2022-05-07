@@ -47,12 +47,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FE4E0D8327F6910400821F73 /* PBXContainerItemProxy */ = {
+		FE2C0CEA27FFCC9200B2C86A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FE4E0D7527F6910400821F73 /* RtcSDK.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = E2C371AB611D4E769109BAFE;
-			remoteInfo = RtcBitrateAdjustor;
+			remoteGlobalIDString = B5005947775D4A73871164F8;
+			remoteInfo = TsKcp;
 		};
 		FE4E0D8527F6910400821F73 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -60,13 +60,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = 2120C9ACC1BA47A7A28060CE;
 			remoteInfo = Sol2Common;
-		};
-		FE4E0D8727F6910400821F73 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FE4E0D7527F6910400821F73 /* RtcSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B21B9408DF7044499FB5D20F;
-			remoteInfo = Sol2Socket;
 		};
 		FE4E0D8927F6910400821F73 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -103,19 +96,26 @@
 			remoteGlobalIDString = 2D4715F4B7854CEEA382E8F8;
 			remoteInfo = sol2;
 		};
-		FE4E0D9327F6910400821F73 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FE4E0D7527F6910400821F73 /* RtcSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = ECC4F80E23284F6DAE6E5BB7;
-			remoteInfo = sol2_proto_files;
-		};
 		FE4E0D9927F6913500821F73 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FE4E0D7527F6910400821F73 /* RtcSDK.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = D5F9CE6F92E04AF28B818559;
+			remoteGlobalIDString = 4B693AAF30834F46A9C8217A;
 			remoteInfo = TSRtc_iOS;
+		};
+		FE7D8635280E5E5B00D58893 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE4E0D7527F6910400821F73 /* RtcSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6AB4AFC6D9F64B7C83FBFB61;
+			remoteInfo = RtcBitrateAdjustor;
+		};
+		FE7D8637280E5E5B00D58893 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE4E0D7527F6910400821F73 /* RtcSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 8ADB30117EEF432BA2983C6D;
+			remoteInfo = Sol2Socket;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -754,15 +754,15 @@
 		FE4E0D7627F6910400821F73 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FE4E0D8427F6910400821F73 /* libRtcBitrateAdjustor.a */,
+				FE7D8636280E5E5B00D58893 /* libRtcBitrateAdjustor.a */,
 				FE4E0D8627F6910400821F73 /* libSol2Common.a */,
-				FE4E0D8827F6910400821F73 /* libSol2Socket.a */,
+				FE7D8638280E5E5B00D58893 /* libSol2Socket.a */,
 				FE4E0D8A27F6910400821F73 /* TSRtc_iOS.framework/TSRtc_iOS */,
+				FE2C0CEB27FFCC9200B2C86A /* libTsKcp.a */,
 				FE4E0D8C27F6910400821F73 /* libmn-library.a */,
 				FE4E0D8E27F6910400821F73 /* librazor.a */,
 				FE4E0D9027F6910400821F73 /* libsol.a */,
 				FE4E0D9227F6910400821F73 /* libsol2.a */,
-				FE4E0D9427F6910400821F73 /* libsol2_proto_files.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -830,11 +830,11 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		FE4E0D8427F6910400821F73 /* libRtcBitrateAdjustor.a */ = {
+		FE2C0CEB27FFCC9200B2C86A /* libTsKcp.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libRtcBitrateAdjustor.a;
-			remoteRef = FE4E0D8327F6910400821F73 /* PBXContainerItemProxy */;
+			path = libTsKcp.a;
+			remoteRef = FE2C0CEA27FFCC9200B2C86A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		FE4E0D8627F6910400821F73 /* libSol2Common.a */ = {
@@ -842,13 +842,6 @@
 			fileType = archive.ar;
 			path = libSol2Common.a;
 			remoteRef = FE4E0D8527F6910400821F73 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FE4E0D8827F6910400821F73 /* libSol2Socket.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libSol2Socket.a;
-			remoteRef = FE4E0D8727F6910400821F73 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		FE4E0D8A27F6910400821F73 /* TSRtc_iOS.framework/TSRtc_iOS */ = {
@@ -887,11 +880,18 @@
 			remoteRef = FE4E0D9127F6910400821F73 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FE4E0D9427F6910400821F73 /* libsol2_proto_files.a */ = {
+		FE7D8636280E5E5B00D58893 /* libRtcBitrateAdjustor.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = libsol2_proto_files.a;
-			remoteRef = FE4E0D9327F6910400821F73 /* PBXContainerItemProxy */;
+			path = libRtcBitrateAdjustor.a;
+			remoteRef = FE7D8635280E5E5B00D58893 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FE7D8638280E5E5B00D58893 /* libSol2Socket.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSol2Socket.a;
+			remoteRef = FE7D8637280E5E5B00D58893 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1131,7 +1131,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = C6T93NC4DJ;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1168,7 +1168,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = C6T93NC4DJ;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",

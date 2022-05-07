@@ -58,6 +58,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FE2C0CF627FFCD3A00B2C86A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE4E0D5527F690F000821F73 /* RtcSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 96D1BAF1E2194D6BA385A160;
+			remoteInfo = TsKcp;
+		};
 		FE4E0D6327F690F000821F73 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FE4E0D5527F690F000821F73 /* RtcSDK.xcodeproj */;
@@ -114,18 +121,11 @@
 			remoteGlobalIDString = C733B9F5B26843F5B284F3A8;
 			remoteInfo = sol2;
 		};
-		FE4E0D7327F690F000821F73 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FE4E0D5527F690F000821F73 /* RtcSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 035B9EAF53D74EF8BD2E9F4B;
-			remoteInfo = sol2_proto_files;
-		};
 		FE4E0D9527F6911600821F73 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FE4E0D5527F690F000821F73 /* RtcSDK.xcodeproj */;
 			proxyType = 1;
-			remoteGlobalIDString = 1DA8306CBEA34ACFAECA4439;
+			remoteGlobalIDString = 5DEBD40E212F460CA0F4BD99;
 			remoteInfo = TSRtc_macOS;
 		};
 /* End PBXContainerItemProxy section */
@@ -819,11 +819,11 @@
 				FE4E0D6627F690F000821F73 /* libSol2Common.a */,
 				FE4E0D6827F690F000821F73 /* libSol2Socket.a */,
 				FE4E0D6A27F690F000821F73 /* TSRtc_macOS.framework/TSRtc_macOS */,
+				FE2C0CF727FFCD3A00B2C86A /* libTsKcp.a */,
 				FE4E0D6C27F690F000821F73 /* libmn-library.a */,
 				FE4E0D6E27F690F000821F73 /* librazor.a */,
 				FE4E0D7027F690F000821F73 /* libsol.a */,
 				FE4E0D7227F690F000821F73 /* libsol2.a */,
-				FE4E0D7427F690F000821F73 /* libsol2_proto_files.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -892,6 +892,13 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		FE2C0CF727FFCD3A00B2C86A /* libTsKcp.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libTsKcp.a;
+			remoteRef = FE2C0CF627FFCD3A00B2C86A /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		FE4E0D6427F690F000821F73 /* libRtcBitrateAdjustor.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -947,13 +954,6 @@
 			fileType = archive.ar;
 			path = libsol2.a;
 			remoteRef = FE4E0D7127F690F000821F73 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		FE4E0D7427F690F000821F73 /* libsol2_proto_files.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libsol2_proto_files.a;
-			remoteRef = FE4E0D7327F690F000821F73 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1201,7 +1201,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = C6T93NC4DJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1245,7 +1245,7 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 14;
 				DEVELOPMENT_TEAM = C6T93NC4DJ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

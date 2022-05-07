@@ -37,6 +37,8 @@ static uint64_t rz_milliseconds(void)
 @property (nonatomic, strong) TSVideoDecoder *videoDecoder;
 @property (nonatomic, strong) dispatch_queue_t encodeQueue;
 
+@property (nonatomic, assign) BOOL forceEncodeKeyFrame;
+
 @end
 
 @implementation TSSourceManager
@@ -60,6 +62,11 @@ static uint64_t rz_milliseconds(void)
         
         //发送
         _masterVideoSource = [TSMVideoSourceImp new];
+        __weak typeof(self)weakself = self;
+        _masterVideoSource.requestKeyFrameBlock = ^BOOL{
+            weakself.forceEncodeKeyFrame = YES;
+            return YES;
+        };
         
         _encodeQueue = dispatch_queue_create("com.video.encode.queue", DISPATCH_QUEUE_SERIAL);
         
@@ -138,7 +145,8 @@ static uint64_t rz_milliseconds(void)
     CVPixelBufferRetain(pixelBuffer);
     dispatch_async(self.encodeQueue, ^{
         [self displayPixelBuffer:pixelBuffer timestamp:timestamp];
-        [self.videoEncoder encodeNv12PixelBuffer:pixelBuffer timestamp:timestamp];
+        [self.videoEncoder encodeNv12PixelBuffer:pixelBuffer timestamp:timestamp forceKeyFrame:self.forceEncodeKeyFrame];
+        self.forceEncodeKeyFrame = NO;
         CVPixelBufferRelease(pixelBuffer);
     });
 }

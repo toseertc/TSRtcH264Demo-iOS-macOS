@@ -48,7 +48,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) int bitrate;
 
 - (instancetype)initWithDelegate:(id<TSVideoEncoderDelegate>)delegate;
-- (void)encodeNv12PixelBuffer:(CVPixelBufferRef)pixelBuffer timestamp:(NSTimeInterval)timestamp;
+- (void)encodeNv12PixelBuffer:(CVPixelBufferRef)pixelBuffer timestamp:(NSTimeInterval)timestamp forceKeyFrame:(BOOL)forceKeyFrame;
+
+
+
 
 @end
 

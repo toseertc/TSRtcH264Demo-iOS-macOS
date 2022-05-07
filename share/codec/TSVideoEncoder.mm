@@ -72,7 +72,7 @@ extern "C" {
     return self;
 }
 
-- (void)encodeNv12PixelBuffer:(CVPixelBufferRef)pixelBuffer timestamp:(NSTimeInterval)timestamp {
+- (void)encodeNv12PixelBuffer:(CVPixelBufferRef)pixelBuffer timestamp:(NSTimeInterval)timestamp forceKeyFrame:(BOOL)forceKeyFrame {
 
     if (!pixelBuffer) {
         return;
@@ -97,7 +97,9 @@ extern "C" {
              stride_uv:stride_uv
                  width:width
                 height:height
-             timestamp:timestamp];
+             timestamp:timestamp
+            forceKeyFrame:forceKeyFrame
+        ];
         
         CVPixelBufferUnlockBaseAddress(pixelBuffer, 0);
         CVPixelBufferRelease(pixelBuffer);
@@ -113,6 +115,7 @@ extern "C" {
            width:(int)width
           height:(int)height
        timestamp:(NSTimeInterval)timestamp
+    forceKeyFrame:(BOOL)forceKeyFrame
 {
     TSVideoEncodeConfig *config = [TSVideoEncodeConfig new];
     config.dimension = CGSizeMake(width, height);
@@ -140,6 +143,11 @@ extern "C" {
     _frame->data[1] = (uint8_t *)uv;
     _frame->linesize[0] = stride_y;
     _frame->linesize[1] = stride_uv;
+    if (forceKeyFrame) {
+        _frame->pict_type = AV_PICTURE_TYPE_I;
+    } else {
+        _frame->pict_type = AV_PICTURE_TYPE_NONE;
+    }
     _frame->pts = _pts++;
     
     int ret = avcodec_send_frame(_context, _frame);

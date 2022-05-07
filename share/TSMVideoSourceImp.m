@@ -10,7 +10,7 @@
 @implementation TSMVideoSourceImp
 
 - (TSVideoBufferType)bufferType {
-    return TSVideoBufferTypeRawData;
+    return TSVideoBufferTypeH264;
 }
 
 - (void)shouldDispose {
@@ -28,5 +28,18 @@
 - (void)shouldStop {
     return;
 }
+
+
+- (BOOL)isKeyFrameRequestSupported {
+    return YES;
+}
+
+- (BOOL)requestKeyFrame {
+    if (self.requestKeyFrameBlock) {
+        return self.requestKeyFrameBlock();
+    }
+    return NO;
+}
+
 
 @end
